@@ -15,11 +15,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of userlist.users;">
-      <td (click)="onuserclick(item)">{{ item.full_name }}
-      
-      </td>
-      <td>{{birth}} {{address}}</td>
-      
+      <td (click)="onuserclick(item)">{{ item.full_name }}</td>
+      <td *ngIf="this.ifPressed == true"> {{item.birth_date}}</td>
+      <td *ngIf="this.ifPressed == true"> {{item.address}}</td>
     </tr>
+    
+
+
+
+
+
+    
     </tbody>
 </table>

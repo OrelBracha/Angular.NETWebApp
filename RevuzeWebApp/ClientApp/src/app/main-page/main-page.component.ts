@@ -18,7 +18,7 @@ export class MainPageComponent implements OnInit {
   baseUrl: string;
   userdetails: any;
   userlist: IUsername
-  
+  ifPressed: boolean
 
   constructor(private _usersService: UsersService) { }
   ngOnInit(): void {
@@ -31,12 +31,7 @@ export class MainPageComponent implements OnInit {
       console.log(this.userdetails[1]);
       console.log(this.userdetails[2]);
       console.log(this.userdetails[3]);
-      /*
-      var group1 = this.userdetails[0];
-      var group2 = this.userdetails[1];
-      var group3 = this.userdetails[2];
-      var group4 = this.userdetails[3];
-      */
+      this.ifPressed = false;
       
       
       
@@ -71,12 +66,9 @@ export class MainPageComponent implements OnInit {
   }
  
 
-
+  
   public onuserclick(item)
   {
-    var birth = item.birth_date;
-    var addrees = item.address;
-    
-    
+    this.ifPressed = true;
   }
 }

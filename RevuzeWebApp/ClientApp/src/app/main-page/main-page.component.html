@@ -1,0 +1,25 @@
+<p>main-page works!</p>
+<button class="btn btn-primary" (click)="checkJsonGroup1()">Group 1</button>
+<button class="btn btn-primary" (click)="checkJsonGroup2()">Group 2</button>
+<button class="btn btn-primary" (click)="checkJsonGroup3()">Group 3</button>
+<button class="btn btn-primary" (click)="checkJsonGroup4()">Group 4</button>
+
+<table class="table" id='tab'>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Birth Date</th>
+      <th scope="col">Address</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userlist.users;">
+      <td (click)="onuserclick(item)">{{ item.full_name }}
+      
+      </td>
+      <td>{{birth}} {{address}}</td>
+      
+    </tr>
+    </tbody>
+</table>

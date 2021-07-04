@@ -1,0 +1,44 @@
+
+void fibonnaci(int n)
+{
+
+   if(n==1)
+   syso(n+ "");
+   else
+   {
+   syso(fibonnaci(n-1) + fibonnaci(n-2))
+   }
+  
+
+}
+
+
+
+
+1,1,2,3,5,8,13,21,.....
+
+
+
+int[] maximalprofit(int[]values)
+{
+
+var minNumber = values[0];
+var maxNumber= values[0];
+minNumberIndex = 0;
+maxNumberIndex = values.length -1;
+
+
+for(int i=0; i<values.length-1; i++)
+{
+ int result = values[i+1] - values[i];
+
+ if(values[i+2]-values[i+1] > result)
+ {
+ 
+ result = values[i+2] - values[i+1];
+
+ int maxI
+ }
+
+}
+
